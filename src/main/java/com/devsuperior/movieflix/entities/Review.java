@@ -39,8 +39,6 @@ public class Review implements Serializable {
 		this.movie = movie;
 	}
 	
-	
-
 	public Movie getMovie() {
 		return movie;
 	}
