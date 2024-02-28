@@ -1,8 +1,11 @@
 package com.devsuperior.movieflix.dto;
 
+import java.io.Serializable;
+
 import com.devsuperior.movieflix.entities.Movie;
 
-public class MoviePageableDTO {
+public class MoviePageableDTO  implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private Long id;
     private String title;
     private String subTitle;

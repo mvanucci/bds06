@@ -2,9 +2,12 @@ package com.devsuperior.movieflix.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotBlank;
+
 public class ReviewInsertDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
+	@NotBlank
 	private String text;
 	private Long movieId;
 	
