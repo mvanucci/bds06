@@ -16,8 +16,6 @@ public class MovieDetailsDTO {
 	private String synopsis;
 	private GenreDTO genre;
 	
-	private List<ReviewDTO> reviews = new ArrayList<>();
-	
 	public MovieDetailsDTO() {}
 
 	public MovieDetailsDTO(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis,
@@ -39,11 +37,6 @@ public class MovieDetailsDTO {
 		this.imgUrl = entity.getImgUrl();
 		this.synopsis = entity.getSynopsis();
 		this.genre = new GenreDTO(entity.getGenre());
-	}
-	
-	public MovieDetailsDTO(Movie entity, List<Review> reviews) {
-		this(entity);
-		reviews.forEach(rev -> this.reviews.add(new ReviewDTO(rev)));
 	}
 
 	public Long getId() {
@@ -100,13 +93,5 @@ public class MovieDetailsDTO {
 
 	public void setGenre(GenreDTO genre) {
 		this.genre = genre;
-	}
-
-	public List<ReviewDTO> getReviews() {
-		return reviews;
-	}
-
-	public void setReviews(List<ReviewDTO> reviews) {
-		this.reviews = reviews;
 	}
 }
